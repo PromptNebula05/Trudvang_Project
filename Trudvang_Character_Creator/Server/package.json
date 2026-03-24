@@ -1,0 +1,21 @@
+{
+  "name": "trudvang_server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node dbInit.js && node dbInitUsers.js"
+  },
+  "author": "Morgan Rogers",  
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "graphql": "^16.10.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.9.5"
+  }
+}

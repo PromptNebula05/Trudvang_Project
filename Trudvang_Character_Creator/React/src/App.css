@@ -1,0 +1,326 @@
+/* -- Layout ----------*/
+.App {
+  min-height: 100vh;
+  background-color: var(--tc-parchment);
+}
+
+.App-header {
+  background-color: var(--tc-dark-fill);
+  color: var(--tc-cream-text);
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--tc-rust);
+}
+
+.App-header-title {
+  font-family: 'IM Fell English', 'Bell MT', serif;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tc-cream-text);
+}
+
+.App-header-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.App-header-nav button {
+  font-size: 1.6rem;
+  padding: 20px 48px;
+  margin: 0;
+}
+
+/* -- Page container ----------*/
+.tc-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 48px 40px;
+}
+
+/* -- Section header band ----------*/
+.tc-section-header {
+  background-color: var(--tc-dark-fill);
+  color: var(--tc-cream-text);
+  font-family: 'IM Fell English', 'Bell MT', 'Book Antiqua', serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 0 0 12px 0;
+  border-left: 8px solid var(--tc-rust);
+}
+
+/* -- Card / Panel ----------*/
+.tc-panel {
+  background-color: var(--tc-parchment);
+  border: 1px solid var(--tc-taupe);
+  border-radius: var(--tc-radius-lg);
+  padding: 36px 40px;
+  margin-bottom: 40px;
+}
+.tc-panel h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid var(--tc-taupe);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+/* -- Decorative rule ----------*/
+.tc-rule {
+  border: none;
+  border-top: 2px solid var(--tc-terracotta);
+  margin: 20px 0;
+  opacity: 0.5;
+}
+
+/* -- Buttons ----------*/
+button,
+.btn {
+  font-family: 'IM Fell English', 'Bell MT', 'Book Antiqua', serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.06rem;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--tc-radius);
+  padding: 14px 32px;
+  transition: background-color 0.15s, color 0.15s;
+  background-color: var(--tc-rust);
+  color: var(--tc-cream-text);
+}
+
+/* -- Action bar (groups buttons with spacing) ----------*/
+.tc-action-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+button:hover:not(:disabled),
+.btn:hover:not(:disabled) {
+  background-color: var(--tc-rust-dark);
+}
+button:disabled,
+.btn:disabled {
+  background-color: var(--tc-taupe);
+  color: var(--tc-parchment-dark);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.btn-secondary {
+  background-color: transparent;
+  color: var(--tc-rust);
+  border: 1px solid var(--tc-rust);
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--tc-rust);
+  color: var(--tc-cream-text);
+}
+.btn-danger {
+  background-color: var(--tc-dark-fill);
+  color: var(--tc-cream-text);
+}
+.btn-danger:hover:not(:disabled) {
+  background-color: #3a0000;
+}
+
+/* -- Form inputs / selects / textareas ----------*/
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+  font-family: 'EB Garamond', 'Book Antiqua', serif;
+  font-size: 2rem;
+  color: var(--tc-near-black);
+  background-color: var(--tc-parchment);
+  border: 1px solid var(--tc-taupe);
+  border-radius: var(--tc-radius);
+  padding: 10px 18px;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--tc-rust);
+  box-shadow: 0 0 0 2px rgba(112, 52, 31, 0.18);
+}
+
+label {
+  font-family: 'IM Fell English', 'Bell MT', serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--tc-near-black);
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* -- Tables ----------*/
+table { width: 100%; border-collapse: collapse; font-size: 2rem; }
+thead tr { background-color: var(--tc-dark-fill); color: var(--tc-cream-text); }
+thead th {
+  font-family: 'IM Fell English', serif;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  text-align: left;
+  font-size: 1.6rem;
+}
+tbody tr:nth-child(even) { background-color: var(--tc-parchment-dark); }
+tbody td { padding: 10px 20px; border-bottom: 1px solid var(--tc-taupe); vertical-align: top; }
+
+/* -- Wizard stepper ----------*/
+.wizard-steps {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+  border-bottom: 4px solid var(--tc-terracotta);
+  padding-bottom: 16px;
+}
+.wizard-steps-label {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: var(--tc-radius) var(--tc-radius) 0 0;
+  background-color: var(--tc-parchment-dark);
+  color: var(--tc-terracotta);
+  border: 1px solid var(--tc-taupe);
+  border-bottom: none;
+}
+.wizard-steps-label.active {
+  background-color: var(--tc-dark-fill);
+  color: var(--tc-cream-text);
+  border-color: var(--tc-dark-fill);
+}
+.wizard-steps-label.done {
+  background-color: var(--tc-rust);
+  color: var(--tc-cream-text);
+  border-color: var(--tc-rust);
+}
+
+/* -- Character sheet ----------*/
+.char-sheet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .char-sheet-grid { grid-template-columns: 1fr; }
+}
+.char-trait-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 16px;
+  border-bottom: 1px dotted var(--tc-taupe);
+  font-size: 1.6rem;
+}
+.char-trait-label {
+  width: 260px;
+  flex-shrink: 0;
+  font-family: 'IM Fell English', serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--tc-terracotta);
+}
+.char-trait-value {
+  font-weight: bold;
+  font-size: 1.6rem;
+  min-width: 56px;
+  text-align: center;
+  background-color: var(--tc-parchment);
+  border: 1px solid var(--tc-taupe);
+  border-radius: 2px;
+  padding: 2px 8px;
+}
+
+/* -- Login page ----------*/
+.login-container {
+  max-width: 800px;
+  margin: 160px auto;
+  background-color: var(--tc-parchment-dark);
+  border: 1px solid var(--tc-taupe);
+  border-radius: var(--tc-radius-lg);
+  padding: 64px 56px;
+}
+.login-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
+}
+.login-container label {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  font-size: 2rem;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+}
+.login-container button {
+  font-size: 1.8rem;
+  padding: 18px 40px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+/* -- Admin panel ----------*/
+.admin-nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid var(--tc-terracotta);
+}
+
+/* -- Loading / spinner ----------*/
+.spinner {
+  width: 96px;
+  height: 96px;
+  border: 8px solid var(--tc-parchment-dark);
+  border-top-color: var(--tc-rust);
+  border-radius: 50%;
+  animation: tc-spin 0.8s linear infinite;
+  margin: 48px auto;
+}
+@keyframes tc-spin { to { transform: rotate(360deg); } }
+
+.loader {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--tc-terracotta);
+  font-family: 'IM Fell English', serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* -- Error / status messages ----------*/
+.tc-error {
+  color: var(--tc-rust-dark);
+  background-color: #f1ddd8;
+  border-left: 8px solid var(--tc-rust);
+  padding: 16px 24px;
+  border-radius: var(--tc-radius);
+  margin: 16px 0;
+  font-size: 0.9rem;
+}
+.tc-success {
+  color: #2d5016;
+  background-color: #dff0d8;
+  border-left: 8px solid #5a9128;
+  padding: 16px 24px;
+  border-radius: var(--tc-radius);
+  margin: 16px 0;
+  font-size: 0.9rem;
+}

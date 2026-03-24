@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --tc-rust:           #70341F;
+  --tc-rust-dark:      #65362F;
+  --tc-terracotta:     #92614C;
+  --tc-taupe:          #958D72;
+  --tc-near-black:     #231F20;
+  --tc-dark-fill:      #221F1F;
+  --tc-parchment:      #F4EFE2;
+  --tc-parchment-dark: #E8E0CC;
+  --tc-cream-text:     #ECEBDF;
+
+  --tc-radius:    4px;
+  --tc-radius-lg: 8px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'EB Garamond', 'Book Antiqua', 'Palatino Linotype', Georgia, serif;
+  font-size: 24px;
+  line-height: 1.6;
+  color: var(--tc-near-black);
+  background-color: var(--tc-parchment);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IM Fell English', 'Bell MT', 'Book Antiqua', serif;
+  color: var(--tc-rust);
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+p { margin-top: 0; }
+
+a {
+  color: var(--tc-rust);
+  text-decoration: none;
+  border-bottom: 1px solid var(--tc-terracotta);
+  transition: color 0.15s, border-color 0.15s;
+}
+a:hover {
+  color: var(--tc-rust-dark);
+  border-bottom-color: var(--tc-rust-dark);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
